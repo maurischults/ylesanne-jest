@@ -1,0 +1,15 @@
+const findLongest = require("./findlongeststring.js");
+
+describe("findLongest", () => {
+  it("exists", () => {
+    expect(findLongest).toBeDefined();
+  });
+  it("check if the array consists only of strings", () => {
+    expect(findLongest(["welcome", "hey", "hello", 1])).toBe(
+      "only strings are allowed as input"
+    );
+  });
+  it("find longest string", () => {
+    expect(findLongest(["welcome", "hey", "hello"])).toBe("welcome");
+  });
+});

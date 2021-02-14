@@ -1,0 +1,23 @@
+const { TestScheduler } = require("jest");
+const Lopp = require("./checkTheEnding.js");
+
+let str1 = "welcome";
+let str2 = "ome";
+
+describe("Lopp", () => {
+  it("checks if str1 ends with str2", () => {
+    expect(Lopp("welcome", "ome")).toBe(true);
+  });
+});
+
+describe("Lopp", () => {
+  it("checks if str1 ends with str2", () => {
+    expect(Lopp("welcome", "end")).toBe(false);
+  });
+});
+
+describe("Lopp", () => {
+  it("checks if strings aren't empty", () => {
+    expect(Lopp("", "")).toBe("both strings are required");
+  });
+});
